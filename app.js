@@ -5,7 +5,7 @@ const app = express();
 const rutaPublic = path.resolve(__dirname, "./public");
 app.use(express.static(rutaPublic));
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Servidor corriendo en puerto 3000");
 });
 
