@@ -1,0 +1,328 @@
+html,
+body {
+  margin: 0;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 12px;
+}
+* {
+  box-sizing: border-box;
+}
+/* colores */
+
+.yellow-txt {
+  color: #eac926;
+}
+.yellow-bg {
+  background-color: #eac926;
+}
+.blue.txt {
+  color: #03264c;
+}
+.blue.bg {
+  background-color: #03264c;
+}
+.light-blue-txt {
+  color: #1259c3;
+}
+.light-blue-bg {
+  background-color: #1259c3;
+}
+.dark-gray-txt {
+  color: #666;
+}
+.dark-gray-bg {
+  background-color: #666;
+}
+.light-grey-txt {
+  color: #ebebeb;
+}
+.light-grey-bg {
+  background-color: #ebebeb;
+}
+.green-txt {
+  color: #39b54a;
+}
+.green-bg {
+  background-color: #39b54a;
+}
+
+/*Tamaño y alineación*/
+
+.titular {
+  font-size: 24px;
+}
+.precio {
+  font-size: 18px;
+}
+.descuento {
+  font-size: 16px;
+}
+.descripcion {
+  font-size: 16px;
+}
+.contenido {
+  font-size: 12px;
+}
+.txt-center {
+  text-align: center;
+}
+.product-wrap {
+  box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  margin-top: 50px;
+}
+
+/*menu*/
+
+.burger-menu {
+  font-size: 24px;
+  text-align: center;
+}
+.burger-menu i {
+  padding: 8px;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+/*navegacion*/
+
+#main-nav ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+#main-nav ul a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Pie de pagina*/
+
+#footer-pag {
+  text-align: center;
+  margin: 55px;
+  margin-top: 145px;
+}
+#footer-pag i {
+  font-size: 2em;
+  color: #1259c3;
+  margin-bottom: 10px;
+}
+#footer-pag h3 {
+  margin: 0px;
+}
+#footer-pag p {
+  margin: 0px;
+  margin-bottom: 60px;
+}
+section img {
+  width: 100%;
+}
+
+/*icons*/
+
+.truck-icon {
+  padding: 5px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 40px;
+  border-color: #39b54a;
+  color: #39b54a;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+
+/*Logo*/
+
+#logo {
+  width: 50%;
+}
+.search-bar {
+  width: 50%;
+}
+
+#main-content {
+  width: 100%;
+  padding: 0 5%;
+}
+
+#main-content article {
+  border-top: 1px solid #ebebeb;
+  margin-bottom: 10px;
+  padding: 15px;
+}
+
+.header {
+  width: 100%;
+  padding: 5%;
+}
+
+.banner img {
+  width: 100vw;
+}
+/*display*/
+.none {
+  display: none;
+}
+.block {
+  display: block;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.inline {
+  display: inline;
+}
+/*Position*/
+.relative {
+  position: relative;
+}
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+/*transiciones*/
+.login .button-form:hover {
+  background-color: #0022aa;
+  transition: background-color, 500ms;
+}
+/*medias queries*/
+
+@media screen and (min-width: 480px) {
+  #logo {
+    width: 33%;
+  }
+  .search-bar {
+    width: 33%;
+  }
+  .header-txt {
+    width: 33%;
+    max-width: 350px;
+    text-align: right;
+    font-size: 17px;
+  }
+  .product-wrap {
+    width: 50%;
+    padding: 10px;
+  }
+  .burger-menu {
+    display: none;
+  }
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+  }
+  #main-nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  #main-nav ul {
+    display: flex;
+  }
+  #main-nav li {
+    margin: 0px 5px;
+  }
+  .product-wrap {
+    box-shadow: none;
+    margin-top: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .product-wrap {
+    width: 25%;
+  }
+  .descripcion {
+    display: none;
+  }
+  .product-wrap:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+  .product-wrap:hover .descripcion {
+    display: block;
+  }
+  .truck-icon{
+    transition: transform ease-in-out 1000ms;
+  }
+  .product-wrap:hover .truck-icon {
+    transform: rotate(-360deg);
+  }
+  #footer-pag section{
+    width: 25%;
+  }
+  #footer-pag{
+    display: flex;
+    justify-content: space-around;
+  }
+  #footer-pag section:hover i{
+    color: #eac926;
+    transition: color, 500ms;
+  }
+}
+@media (min-width: 1200px) {
+  .top-bar {
+    max-width: 1200px;
+    margin: auto;
+  }
+  #main-nav {
+    max-width: 1200px;
+    margin: auto;
+  }
+  .price-discount-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .precio {
+    min-width: 30%;
+    padding-right: 10px;
+  }
+  .descuento {
+    text-align: center;
+  }
+}
+
+/* Formulario */
+
+.form-title {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+}
+.form-input {
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+.form-box {
+  margin-bottom: 20px;
+}
+.button-form {
+  background-color: #1259c3;
+  border: none;
+  border-radius: 5px;
+  width: 30%;
+  padding: 10px;
+}
+.main-form {
+  margin-top: 40px;
+}
+.form-selectors {
+  padding: 10px;
+}
+.login {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.login .button-form {
+  width: 100%;
+}
+.form-search-bar {
+  width: 80%;
+  margin: 0;
+}
